@@ -3,44 +3,53 @@
   <head>
     <title>uTube</title>
 
-
     <!-- Latest compiled and minified CSS -->
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+    body.container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #results.container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    </style>
   </head>
-  <body>
+  <body class="container">
 
-      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-      <h1><p class="text-center" style="color:red" >uTube</p></h1>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <h1>
+      <p class="text-center" style="color:red">uTube</p>
+    </h1>
 
-      <div id="buttons">
-        <label></label>
-        <input  type="text" class="form-control" id="query" placeholder="Keyword"> </input>
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="search-button"   onclick="search(); showSearch();">Search</button>
+    <div id="buttons">
+      <label></label>
+      <input type="text" class="form-control" id="query" placeholder="Keyword"></input>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="search-button" onclick="search(); showSearch();">Search</button>
+    </div>
+
+    <h2>
+      <p class="text-center" id="change"></p>
+    </h2>
+    <div align="center">
+      <div id="results" class="container">
       </div>
-
-          <h2><p class="text-center" id="change"> </p</h2>
-      <div align="center">
-          <ul id="results"></ul>
-      </div>
-
-
+    </div>
 
     <script>
 
-    function showSearch() {
-      document.getElementById("change").innerHTML = "Search result";
-    }
-
+      function showSearch() {
+        document.getElementById("change").innerHTML = "Search result";
+      }
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="/src/search.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-
-
-    </script>
-  </body>
+  </script>
+</body>
 </html>
